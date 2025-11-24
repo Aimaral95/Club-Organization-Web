@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NAU Student Organizations</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="./styles/style.css" />
+
+  
+</head>
+
+<body>
+  <!-- Background Shape -->
+  <img src="images/wave.avif" class="background-shape" alt="Background Shape" />
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <img src="https://www.na.edu/wp-content/uploads/2021/03/nau-sec-logo.svg" alt="NAU Logo" />
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav>
+    <!-- Sidebar for Mobile View -->
+    <ul class="sidebar">
+      <li onclick="hideSidebar()">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#666666">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+          Menu
+        </a>
+      </li>
+      <li><a href="#">Admissions</a></li>
+      <li><a href="#">Academics</a></li>
+      <li><a href="#">Faculty & Staff</a></li>
+      <li><a href="#">Campus Life</a></li>
+      <li><a href="#">Students</a></li>
+      <li><a href="#">About NAU</a></li>
+    </ul>
+
+    <!-- Main Menu for Desktop View -->
+    <ul class="main-menu">
+      <li class="menu-button" onclick="showSidebar()">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" fill="#666666">
+            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+          </svg>
+          Menu
+        </a>
+      </li>
+      <li class="hideOnMobile"><a href="#">Admissions</a></li>
+      <li class="hideOnMobile"><a href="#">Academics</a></li>
+      <li class="hideOnMobile"><a href="#">Faculty & Staff</a></li>
+      <li class="hideOnMobile"><a href="#">Campus Life</a></li>
+      <li class="hideOnMobile"><a href="#">Students</a></li>
+      <li class="hideOnMobile"><a href="#">About NAU</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Page Header -->
+    <div class="header-container">
+      <div class="header-content">
+        <div class="heading-group">
+          <span class="superhead">Get Involved With</span>
+          <h1 class="head-container">Student Organizations</h1>
+        </div>
+        <p class="page-header-description">
+          Your college experience involves more than going to classes. 
+          Organizations and activities offer ways to get involved, serve others, meet people and grow.
+        </p>
+      </div>
+
+      <!-- Search Button -->
+      <div class="header-button">
+        <a class="student-organization-link" href="#student-organizations">Search for student organizations</a>
+      </div>
+    </div>
+
+    <!-- Upcoming Events Section -->
+    <section class="events">
+      <div class="title">
+        <h1>Upcoming Events</h1>
+        <div class="line"></div>
+      </div>
+
+      <div class="event-row">
+        <!-- Event Card 1 -->
+        <div class="event-card">
+          <img src="./images/ASA-FLYER.png" alt="ASA flyer" />
+          <h4>No Wahala Zone</h4>
+          <p>Relax and celebrate the end of the semester with ASA’s No Wahala Zone: a chill hangout to de-stress and vibe!</p>
+          <a href="#" class="ctn">Register</a>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="event-card">
+          <img src="./images/bus-wom.jpeg" alt="Women in Business flyer" />
+          <h4>Navigating the Modern Job Market</h4>
+          <p>Join us this Thursday at 2:30 PM with Tracy Noel as she shares insights into today's job market. 👩🏻‍💼</p>
+          <a href="#" class="ctn">Register</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Organizations Section -->
+    <section class="clubs" id="student-organizations">
+      <h1>Student Organizations</h1>
+
+      <div class="slider" id="clubSlider">
+        <!-- Individual Club Cards -->
+        <div class="club-card">
+          <img src="./images/acm-logo.jpg" alt="ACM Logo" />
+          <h3>ACM</h3>
+          <p>Professional club for CS and tech students. Coding events, workshops, and more.</p>
+          <a href="acm.html" class="learn-more-button">Learn More</a>
+        </div>
+
+        <div class="club-card">
+          <img src="./images/acm-w-logo.png" alt="ACM-W Logo" />
+          <h3>ACM-W</h3>
+          <p>Advocates for women in computing. Networking, mentorship, leadership skills.</p>
+          <a href="./clubs/acm-w.html" class="learn-more-button">Learn More</a>
+        </div>
+
+        <div class="club-card">
+          <img src="./images/asa-logo.png" alt="ASA Logo" />
+          <h3>ASA</h3>
+          <p>Promotes African heritage, unity, and awareness through events and socials.</p>
+          <a href="asa.html" class="learn-more-button">Learn More</a>
+        </div>
+
+        <div class="club-card">
+          <img src="./images/dsa-logo.webp" alt="DSA Logo" />
+          <h3>DSA</h3>
+          <p>Data science, machine learning, and analytics workshops and competitions.</p>
+          <a href="dsa.html" class="learn-more-button">Learn More</a>
+        </div>
+
+        <div class="club-card">
+          <img src="./images/bus-wom-logo.png" alt="Women in Business Logo" />
+          <h3>Women in Business</h3>
+          <p>Professional development, leadership, and networking for women in business.</p>
+          <a href="women-in-business.html" class="learn-more-button">Learn More</a>
+        </div>
+
+        <div class="club-card">
+          <img src="./images/art-logo.jpg" alt="Art Club Logo" />
+          <h3>Art Club</h3>
+          <p>Creative community exploring art styles and group projects.</p>
+          <a href="art-club.html" class="learn-more-button">Learn More</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Student Life Section -->
+    <section class="contact-student-life">
+      <div class="student-life-info">
+        <p>Office of Student Services, Room 812</p>
+        <p>Phone: 832-230-5543</p>
+        <p>Email: <a href="mailto:studentlife@na.edu">studentlife@na.edu</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <!-- Footer Contact Info -->
+      <div class="footer-contact">
+        <img src="https://www.na.edu/images/logo/nau-white.svg" alt="NAU Footer Logo" />
+        <address>
+          <a href="https://maps.app.goo.gl/f1Dmi6LRdcrqf1e59" target="_blank">
+            11929 W Airport Blvd<br>Houston, Texas 77477<br>
+          </a>
+          <a href="tel:8322305555">(832) 230-5555</a>
+        </address>
+      </div>
+
+      <!-- Footer Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <div class="links-columns">
+          <ul>
+            <li><a href="#">ADP Portal</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Catalog</a></li>
+            <li><a href="#">Course Schedule</a></li>
+            <li><a href="#">Financial Aid</a></li>
+            <li><a href="#">Language School</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Housing</a></li>
+            <li><a href="#">Human Resources</a></li>
+            <li><a href="#">Library</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Privacy Policies</a></li>
+            <li><a href="#">Virtual Tour</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Administration</a></li>
+            <li><a href="#">Annual Reports</a></li>
+            <li><a href="#">Scholarships</a></li>
+            <li><a href="#">Emergency</a></li>
+            <li><a href="#">Deadlines</a></li>
+            <li><a href="#">Parking</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bottom Bar -->
+  <div class="bottom-bar">
+    <div class="bottom-content">
+      <div class="copyright">
+        © 2025 North American University
+      </div>
+      <div class="legal-links">
+        <a href="#">Accreditation</a> | 
+        <a href="#">Title IX</a> | 
+        <a href="#">Consumer Information</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Toggle Script -->
+  <script>
+    function showSidebar() {
+      document.querySelector('.sidebar').style.display = 'flex';
+    }
+
+    function hideSidebar() {
+      document.querySelector('.sidebar').style.display = 'none';
+    }
+  </script>
+
+</body>
+
+</html>
