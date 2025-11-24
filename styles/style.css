@@ -1,0 +1,518 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+p {
+  color: #333;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px 0;
+}
+
+.background-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover; 
+  opacity: 0.05; /* very faint */
+  z-index: -1; /* put behind everything */
+  pointer-events: none; 
+}
+
+
+
+/* Header */
+header {
+  background-color: #183f8b;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Header styles */
+header.site-header {
+  background-color: #183f8b;
+  padding: 20px;
+  text-align: center;
+}
+
+.site-header img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Navigation */
+nav {
+  background-color: white;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  height: 100%;
+  color: #666666;
+  text-decoration: none;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: sticky;
+  top: 20px;
+  width: 250px;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+/* Header content */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content {
+  flex: 1;
+}
+
+.header-button {
+  flex-shrink: 0;
+}
+
+.superhead {
+  color: #183f8b;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.head-container {
+  font-family: "Oswald", Arial, sans-serif;
+  color: #183f8b;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.page-header-description {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.125rem;
+  color: #333;
+  max-width: 600px;
+}
+
+/* Student org link */
+.student-organization-link {
+  display: inline-flex;
+  padding: 15px 30px;
+  background-color: #183f8b;
+  color: white;
+  border: none;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease; /* smooth transition */
+}
+
+/* Glow effect on hover */
+.student-organization-link:hover {
+  background-color: #152f63; /* darker blue on hover */
+  box-shadow: 0 0 15px rgba(24, 63, 139, 0.6), 0 0 30px rgba(24, 63, 139, 0.4);
+  transform: translateY(-3px); /* slight lift up */
+}
+
+/* Events */
+.events {
+  width: 80%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 4vmin;
+  color: #183f8b;
+}
+
+.event-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.event-card {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1 1 300px;
+  max-width: 400px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Clubs Section */
+.clubs {
+  width: 90%;
+  margin: 80px auto;
+  text-align: center;
+}
+
+.clubs h1 {
+  color: #183f8b;
+  margin-bottom: 40px;
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.club-card {
+  flex: 0 0 auto;
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+}
+
+.club-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.club-card h3 {
+  font-size: 20px;
+  color: #183f8b;
+  margin-bottom: 10px;
+}
+
+.club-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.learn-more-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #183f8b;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.learn-more-button:hover {
+  background-color: #152f63;
+  box-shadow: 0 0 10px rgba(24, 63, 139, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.ctn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #183f8b;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.ctn:hover {
+  background-color: #152f63;
+}
+
+.contact-student-life {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+.student-life-info {
+  font-family: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: #A5A5A5;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.student-life-info a {
+  color: #183f8b;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Footer */
+.site-footer {
+  background-color: #363839;
+  color: #B3B3B3;
+  padding: 50px 20px;
+  font-family: Oswald, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Important: allow wrapping for small screens */
+  gap: 30px;
+}
+
+/* Left side - Logo and address */
+.footer-contact {
+  flex: 0 0 30%;
+}
+
+.footer-contact img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-contact address {
+  font-style: normal;
+  color: #B3B3B3;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.footer-contact a {
+  color: #B3B3B3;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Right side - Quick Links */
+.footer-links {
+  flex: 0 0 65%;
+}
+
+.footer-links h3 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.links-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.links-columns ul {
+  list-style: none;
+  flex: 0 0 30%; /* Each column fixed width */
+}
+
+.links-columns ul li {
+  margin-bottom: 10px;
+}
+
+.links-columns ul li a {
+  color: #B3B3B3;
+  text-decoration: none; /* remove underline initially */
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+}
+
+.links-columns ul li a:hover {
+  text-decoration: underline dotted; /* dotted underline on hover */
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  background-color: #1e1e1e;
+  color: #b3b3b3;
+  font-size: 14px;
+  padding: 15px 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.bottom-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.bottom-content a {
+  color: #b3b3b3;
+  text-decoration: none;
+  margin: 0 5px;
+  font-size: 14px;
+}
+
+.bottom-content a:hover {
+  text-decoration: underline;
+}
+
+
+/* Responsive */
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+    /* Footer Layout */
+    .footer-contact, .footer-links {
+      flex: 1 1 100%; /* Stack logo/address then links */
+      text-align: center;
+    }
+  
+    .footer-contact img {
+      margin: 0 auto 20px;
+    }
+  
+    .footer-links h3 {
+      font-size: 18px;
+      margin-top: 30px;
+    }
+  
+    /* Keep 3 columns inside quick links */
+    .links-columns {
+      flex-wrap: nowrap;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    .links-columns ul {
+      flex: 0 0 30%;
+    }
+  
+    .links-columns ul li a {
+      font-size: 12px;
+    }
+  
+    /* Bottom bar stacking */
+    .bottom-content {
+      flex-direction: column;
+      gap: 8px;
+      text-align: center;
+    }
+}
+
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .club-card {
+    width: 200px;
+  }
+  .site-header {
+    padding: 10px;
+  }
+
+  .bottom-bar {
+    padding: 10px 15px;
+  }
+
+  .bottom-content {
+    font-size: 12px;
+  }
+
+  .bottom-content a {
+    font-size: 12px;
+  }
+}
